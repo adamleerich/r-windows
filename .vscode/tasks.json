@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "make EXE of active file",
+			// passed to cmd.exe
+			"command": "bash -c \"make ${relativeFileDirname}/${fileBasenameNoExtension}.exe\"",
+			"args": [
+				""
+			],
+			"options": {},
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+		}
+	]
+}
