@@ -27,5 +27,8 @@
         "path": "cmd.exe"
     },
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.useWslProfiles": false
+    "terminal.integrated.useWslProfiles": false,
+    "files.associations": {
+        "*.h": "c"
+    }
 }
