@@ -24,22 +24,6 @@ $(PRISTINE_TARGETS): $(R_SOURCE)/$$(@D)/$$(@F)
 	@mkdir -p $(@D)
 	cp -r $(R_SOURCE)/$(@D)/$(@F) $(@D)/$(@F)
 
-src/main.exe: src/main.c
-	gcc $< -o $@
-
-src/helloworld.exe: src/helloworld.cpp
-	g++ $< -o $@
-
-tests/test-example.exe: tests/test-example.c
-	@gcc -I/mingw64/include -L/mingw64/lib -o $@ $< -lcmocka
-	@./$@
-
-tests/test-dunif.exe: tests/test-dunif.c
-	@gcc -DMATHLIB_STANDALONE -Isrc/include -Isrc/include/R_ext -Isrc/gnuwin32/fixed/h -I/mingw64/include -L/mingw64/lib -o $@ $< -lcmocka
-	@./$@
-
-
-	
 clean:
 	rm -f src/main.exe
 	rm -f src/helloworld.exe

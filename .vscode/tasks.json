@@ -3,9 +3,9 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "make EXE of active file",
+			"label": "Run minunit test",
 			// passed to cmd.exe
-			"command": "bash -c \"make ${relativeFileDirname}/${fileBasenameNoExtension}.exe\"",
+			"command": "bash -c \"source ~/.bash_profile; make -C tests/minunit ${fileBasenameNoExtension}.exe\"",
 			"args": [
 				""
 			],
@@ -13,13 +13,33 @@
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
-				"isDefault": true
+				"isDefault": false
 			},
 			"presentation": {
 				"panel": "shared",
 				"showReuseMessage": false,
-				"clear": false
+				"clear": true
 			},
-		}
+		},
+		// {
+		// 	"type": "shell",
+		// 	"label": "make EXE of active file",
+		// 	// passed to cmd.exe
+		// 	"command": "bash -c \"make ${relativeFileDirname}/${fileBasenameNoExtension}.exe\"",
+		// 	"args": [
+		// 		""
+		// 	],
+		// 	"options": {},
+		// 	"problemMatcher": [],
+		// 	"group": {
+		// 		"kind": "build",
+		// 		"isDefault": true
+		// 	},
+		// 	"presentation": {
+		// 		"panel": "shared",
+		// 		"showReuseMessage": false,
+		// 		"clear": false
+		// 	},
+		// }
 	]
 }

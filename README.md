@@ -33,6 +33,7 @@ Use `cmocka` for unit testing.
 
 ```sh
 # cmocka does not come with Rtools44
+# https://packages.msys2.org/base/mingw-w64-cmocka
 pacman -S mingw-w64-x86_64-cmocka
 ```
 
@@ -41,10 +42,14 @@ Further reading on `cmocka`
 * https://cmocka.org/
 * https://api.cmocka.org/
 * https://re-ws.pl/2018/10/using-cmocka-for-unit-testing-c-code/
+* https://www.slideshare.net/slideshow/test-driven-development-in-c/603733#122
+
 
 ## GNU debugger
 
 I haven't figured out how to get the debugger to work in VSCode.
+https://code.visualstudio.com/docs/cpp/config-mingw
+
 
 ```sh
 # gbd does not come with Rtools44 by default
